@@ -1,0 +1,6 @@
+{
+  "timezone": "Europe/Moscow",
+  "schedule": "before 6am every weekend",
+  "automerge": true,
+  "extends": ["config:base"]
+}

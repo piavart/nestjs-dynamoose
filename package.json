@@ -1,0 +1,66 @@
+{
+  "name": "@piavart/nestjs-dynamoose",
+  "version": "0.0.1",
+  "description": "NestJs dynamoose module (v3)",
+  "author": "Piavart",
+  "repository": "https://github.com/hardyscc/nestjs-dynamoose.git",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint \"lib/**/*.ts\" --max-warnings 0",
+    "format": "prettier \"lib/**/*.ts\" --write",
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "precommit": "lint-staged",
+    "prepublish:npm": "npm run build",
+    "publish:npm": "npm publish --access public",
+    "prepublish:next": "npm run build",
+    "publish:next": "npm publish --access public --tag next",
+    "prerelease": "npm run build",
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.0.3",
+    "@commitlint/config-angular": "17.0.3",
+    "@nestjs/common": "^8.4.7",
+    "@nestjs/core": "^8.4.7",
+    "@types/node": "16.11.45",
+    "@typescript-eslint/eslint-plugin": "5.30.7",
+    "@typescript-eslint/parser": "5.30.7",
+    "dynamoose": "^3.0.0-beta.6",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "8.0.1",
+    "lint-staged": "13.0.3",
+    "prettier": "2.7.1",
+    "reflect-metadata": "0.1.13",
+    "release-it": "15.1.4",
+    "rxjs": "7.5.6",
+    "rxjs-compat": "6.6.7",
+    "ts-node": "10.9.1",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0",
+    "@nestjs/core": "^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^6.0.0 || ^7.0.0"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -c .commitlintrc.json -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "keywords": [
+    "NestJs",
+    "dynamoose",
+    "dynamoose v3"
+  ]
+}
