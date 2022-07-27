@@ -3,7 +3,7 @@
   "version": "0.0.1-alpha",
   "description": "NestJs dynamoose module (v3)",
   "author": "Piavart",
-  "repository": "https://github.com/hardyscc/nestjs-dynamoose.git",
+  "repository": "https://github.com/piavart/nestjs-dynamoose.git",
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
@@ -60,6 +60,7 @@
   },
   "keywords": [
     "NestJs",
+    "dynamodb",
     "dynamoose",
     "dynamoose v3"
   ]
