@@ -1,8 +1,17 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { DynamicModule, Global, Module, Provider, Type } from '@nestjs/common';
+import {
+  DynamicModule,
+  Global,
+  Logger,
+  Module,
+  Provider,
+  Type,
+} from '@nestjs/common';
 import { aws } from 'dynamoose';
 import { Table } from 'dynamoose/dist/Table';
 import { DynamoDB } from '@aws-sdk/client-dynamodb';
+import { DynamooseModule } from './dynamoose.module';
+import * as dynamoose from 'dynamoose';
 import {
   DYNAMOOSE_INITIALIZATION,
   DYNAMOOSE_MODULE_OPTIONS,
@@ -29,6 +38,13 @@ function initialization(options: DynamooseModuleOptions) {
   }
   if (options.tableOptions) {
     (<any>Table.defaults).set(options.tableOptions);
+  }
+  if (options.logger) {
+    const logger =
+      typeof options.logger === 'boolean'
+        ? new Logger(DynamooseModule.name)
+        : options.logger;
+    dynamoose.logger().then((_logger) => _logger.providers.set(logger));
   }
 }
 
