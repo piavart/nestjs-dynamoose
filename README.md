@@ -5,9 +5,8 @@
 <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
 
 <p align="center">
-<a href="https://www.npmjs.com/package/nestjs-dynamoose"><img src="https://img.shields.io/npm/v/nestjs-dynamoose" alt="NPM Version"></a>
+<a href="https://www.npmjs.com/package/nestjs-dynamoose"><img src="https://img.shields.io/npm/v/@piavart/nestjs-dynamoose" alt="NPM Version"></a>
 <a href="https://github.com/piavart/nestjs-dynamoose/blob/master/LICENSE"><img src="https://img.shields.io/github/license/piavart/nestjs-dynamoose" alt="Package License"></a>
-<a href="https://www.npmjs.com/package/@Piavart/nestjs-dynamoose"><img src="https://img.shields.io/npm/dm/nestjs-dynamoose.svg" alt="NPM Downloads" /></a>
 <a href="https://github.com/piavart/nestjs-dynamoose/actions"><img src="https://github.com/hardyscc/nestjs-dynamoose/workflows/Node.js%20CI/badge.svg" alt="CI"></a>
 
 ## Description
