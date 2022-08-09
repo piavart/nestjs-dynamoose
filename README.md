@@ -16,7 +16,7 @@
 ## Installation
 
 ```bash
-$ npm install --save @piavart/nestjs-dynamoose dynamoose@3.0.0-beta.6
+$ npm install --save @piavart/nestjs-dynamoose dynamoose@3.0.0-beta.8
 ```
 
 ## Base Project

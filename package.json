@@ -1,6 +1,6 @@
 {
   "name": "@piavart/nestjs-dynamoose",
-  "version": "0.0.1-alpha-2",
+  "version": "0.0.1-alpha-3",
   "description": "NestJs dynamoose module (v3)",
   "author": "Piavart",
   "repository": "https://github.com/piavart/nestjs-dynamoose.git",
